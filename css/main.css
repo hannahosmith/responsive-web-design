@@ -108,13 +108,17 @@ footer {
 
 /* ------------------------ HEADER STYLES ------------------------ */
 
+header {
+  width: 100%;
+  background-color: #202322;
+  color: #e2e3ed;
+}
+
 header .content-wrapper {
   width: 100%;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  background-color: #202322;
-  color: #e2e3ed;
 }
 
 header .header-divider {
@@ -155,7 +159,7 @@ header nav ul li a {
   text-decoration: none;
 }
 
-/* ------------------------ MAIN STYLES ------------------------ */
+/* ------------------------ HOME PAGE STYLES ------------------------ */
 
 html {
   width: 100%;
@@ -178,7 +182,7 @@ section {
 .newsletter-signup {
   background-color: #527158;
   width: 100%;
-  padding: 30px 20px 50px 20px;
+  padding: 30px 20px;
 }
 
 .hero-area .content-wrapper {
@@ -187,6 +191,7 @@ section {
   justify-content: left;
   align-items: center;
   flex-flow: row wrap;
+  padding:
 }
 
 .hero-area h1 {
@@ -230,6 +235,7 @@ section {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  padding: 0;
 }
 
 .features h3 {
@@ -301,6 +307,71 @@ section {
   justify-content: space-between;
   flex-flow: row wrap;
   padding: 50px 20px;
+}
+
+/* ------------------------ ABOUT PAGE STYLES ------------------------ */
+
+.mission .content-wrapper {
+  padding: 50px 20px;
+  background-color: #527158;
+  color: #fff;
+  width: 100%;
+}
+
+.mission .mission-content {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.mission h1 {
+  margin-top: 0;
+}
+
+section .map {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+figure {
+  display: flex;
+  flex-shrink: 1;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+iframe {
+  width: 100%;
+}
+
+section .contact {
+  width: 100%;
+}
+
+.contact {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-flow: row wrap;
+  background-color: #2a423a;
+  color: #fff;
+  width: 100%;
+}
+
+.contact .content-wrapper {
+  padding: 50px 20px;
+  width: 100%;
+}
+
+.contact .content-wrapper p {
+  margin: 0;
+}
+
+.contact .contact-col-1,
+.contact .contact-col-2 {
+  width: 100%;
 }
 
 /* ------------------------ FOOTER STYLES ------------------------ */
@@ -386,8 +457,11 @@ footer .copyright {
 
 /* -------------------- MEDIA QUERIES FOR OTHER DEVICES -------------------- */
 
-/* TABLET STYLES */
-@media only screen and (min-width: 768px) {
+
+/*=============================================================================
+ TABLET STYLES
+ ============================================================================*/
+ @media only screen and (min-width: 768px) {
 
   /*Tablet Header */
 
@@ -442,34 +516,34 @@ footer .copyright {
   }
 
   .newsletter-signup {
-    height: 240px;
     display: flex;
-    /* align-items: center; */
-    padding: 50px 60px;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 50px 65px;
   }
 
-  .form-description {
-    /* height: 150px; */
-    width: 50%;
+  .form-description,
+  .form {
+    width: 40%;
     display: flex;
-    align-items: center;
+    /* margin: 0 80px; */
+    /* align-items: flex-start; */
     flex-flow: row wrap;
   }
 
-  .form-description h3,
   .form-description p {
     margin: 0;
-    width: 66%;
   }
 
+ /*
   .form {
     width: 50%;
     display: flex;
     align-items: center;
-  }
+  } */
 
   .features .content-wrapper {
-    padding: 100px 120px;
+    /* padding: 100px 120px; */
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
@@ -523,7 +597,58 @@ footer .copyright {
      margin: 0;
      padding: 0;
    }
+
   /*About Page Tablet Styles */
+
+  .mission .content-wrapper {
+    padding: 90px 60px;
+    background-color: #527158;
+    color: #fff;
+    width: 100%;
+  }
+
+  .mission .mission-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-flow: row wrap;
+    /* width: 90%; */
+    padding: 0;
+    margin: 0;
+  }
+
+  .mission h1 {
+    margin-top: 0;
+    width: 85%;
+  }
+
+  .mission-content p {
+    width: 45%;
+  }
+
+  .contact .content-wrapper {
+    padding: 90px 60px;
+  }
+
+  .contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-flow: row wrap;
+    background-color: #2a423a;
+    color: #fff;
+    width: 100%;
+  }
+
+  .contact h1 {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .contact .contact-col-1,
+  .contact .contact-col-2 {
+      width: 40%;
+  }
 
   /*FAQ Page Tablet Styles */
 
@@ -584,35 +709,48 @@ footer .copyright {
 
 }
 
-/* DESKTOP STYLES */
+/*=============================================================================
+ DESKTOP STYLES
+ ============================================================================*/
+
 @media only screen and (min-width: 1000px) {
 
-  .form-description,
+
+  /* .form-description,
   .form {
     width: 27%;
     height: 160px;
     display: flex;
     align-items: flex-start;
-  }
+  } */
 
-  .form-description h3,
+  /* .form-description h3,
   .form-description p {
     width: 100%;
-  }
+  } */
 
   .newsletter-signup {
-    display: flex;
-    justify-content: space-around;
-    align-items: space-around;
+    /* background-color: #527158;
+    width: 100%; */
+    padding: 50px 80px;
   }
 
-  .form h3 {
+  /* .newsletter-signup {
+    /* display: flex;
+    justify-content: space-around; */
+    /* align-items: flex-start;
+  }  */
+
+  /* .form h3 {
     margin: 0;
   }
 
   .form input {
     margin: 0;
-  }
+  } */
+  /* .hero-area .content-wrapper {
+      padding: 50px 120px;
+  } */
 
   .features {
     height: 800px;
@@ -643,6 +781,37 @@ footer .copyright {
   padding: 95px 0;
   margin: 0;
   }
+
+
+  /* FAQ STYLES */
+  .faq .content-wrapper {
+  padding: 100px 120px;
+}
+
+
+  /* ABOUT STYLES */
+
+  .mission .content-wrapper {
+    padding: 100px 110px;
+  }
+
+  .mission h1 {
+    width: 75%;
+  }
+
+  .mission-content p {
+    width: 40%;
+  }
+
+  .contact .content-wrapper {
+    padding: 100px 110px;
+  }
+
+  .contact-col-1,
+  .contact-col-2 {
+    width: 30%;
+  }
+  /* Footer STYLES */
 
   footer {
     height: 340px;
