@@ -127,13 +127,14 @@ header .header-divider {
 }
 
 header img {
-  margin: 15px 0;
+  padding: 15px 0;
 }
 
 header nav {
   display: flex;
   justify-content: space-around;
   width: 45%;
+  padding: 0;
 }
 
 header nav ul {
@@ -141,17 +142,18 @@ header nav ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-flow: row wrap;
   padding: 0;
 }
 
 header nav ul li {
   list-style: none;
-  /* width: 50%; */
   text-align: center;
   display: flex;
   justify-content: space-around ;
   align-items: center;
-  flex-flow: row nowrap;
+  /* flex-flow: row nowrap; */
+  width: 100%;
 }
 
 header nav ul li a {
@@ -468,35 +470,38 @@ footer .copyright {
   header .content-wrapper {
     height: 100px;
     width: 100%;
-    display: flex;
     flex-flow: row nowrap;
-    justify-content: space-around;
     align-items: center;
-    background-color: #202322;
-    color: #e2e3ed;
+    justify-content: space-between;
+    padding: 0 60px;
   }
 
   header .header-divider {
-    border-bottom: none;
+    border-bottom: 0px solid #000;
+    width: 0%;
   }
 
-  header img {
+  /* header img {
     margin: 15px 60px;
-  }
+  }*/
+
+  /* header nav {
+    display: flex;
+    justify-content: space-around;
+    width: 45%;
+  } */
 
   header nav {
     display: flex;
     justify-content: space-around;
-    width: 45%;
-    padding-right:50px;
+    flex-flow: row nowrap;
+    width: auto;
+    padding: 0;
   }
 
   header nav ul {
-    width: 20%;
-    display: flex;
-    justify-content: space-around;
     align-items: center;
-    padding: 0;
+    flex-flow: row nowrap;
   }
 
   header nav ul li {
@@ -509,7 +514,7 @@ footer .copyright {
 
   .hero-area h1 {
     margin-top: 90px;
-    padding: 90px 170px 21px 65px;
+    padding: 90px 170px 20px 60px;
     margin: 0;
     width: 70%;
     height: 600px;
@@ -552,7 +557,7 @@ footer .copyright {
   .features h3 {
     width: 85%;
     display: flex;
-    justify-content: center;
+    justify-content: left;
   }
 
   .features .features-items {
@@ -612,7 +617,7 @@ footer .copyright {
     justify-content: space-between;
     align-items: flex-start;
     flex-flow: row wrap;
-    /* width: 90%; */
+    width: 90%;
     padding: 0;
     margin: 0;
   }
@@ -623,11 +628,12 @@ footer .copyright {
   }
 
   .mission-content p {
-    width: 45%;
+    width: 40%;
   }
 
   .contact .content-wrapper {
     padding: 90px 60px;
+    width: 90%;
   }
 
   .contact {
@@ -716,6 +722,10 @@ footer .copyright {
 @media only screen and (min-width: 1000px) {
 
 
+  header .content-wrapper {
+    padding: 0 120px;
+  }
+
   /* .form-description,
   .form {
     width: 27%;
@@ -792,7 +802,7 @@ footer .copyright {
   /* ABOUT STYLES */
 
   .mission .content-wrapper {
-    padding: 100px 110px;
+    padding: 100px 120px;
   }
 
   .mission h1 {
@@ -804,12 +814,12 @@ footer .copyright {
   }
 
   .contact .content-wrapper {
-    padding: 100px 110px;
+    padding: 100px 120px;
   }
 
   .contact-col-1,
   .contact-col-2 {
-    width: 30%;
+    width: 40%;
   }
   /* Footer STYLES */
 
