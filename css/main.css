@@ -156,6 +156,11 @@ textarea {
       margin-top: 30px;
     } */
 
+    .features i {
+  	   font-size: 3.75em;
+      margin-bottom: 40px;
+  }
+
   input[type=text] {
     box-sizing: border-box;
     width: 100%;
@@ -432,7 +437,6 @@ section .map {
 
 .map figure {
   display: flex;
-  /* flex-shrink: 1; */
   flex-flow: row wrap;
   width: 100%;
 }
